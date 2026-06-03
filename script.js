@@ -1976,4 +1976,299 @@ box-shadow:
 0 15px 50px rgba(0,212,255,.15);
 
   }
+/* ======================================
+   FAQ ACCORDION
+====================================== */
+
+const faqItems =
+document.querySelectorAll(
+".faq-item"
+);
+
+faqItems.forEach(item=>{
+
+const question =
+item.querySelector(
+".faq-question"
+);
+
+const answer =
+item.querySelector(
+".faq-answer"
+);
+
+question.addEventListener(
+"click",
+()=>{
+
+faqItems.forEach(other=>{
+
+if(other !== item){
+
+other.querySelector(
+".faq-answer"
+).style.display =
+"none";
+
+}
+
+});
+
+if(
+answer.style.display ===
+"block"
+){
+
+answer.style.display =
+"none";
+
+}else{
+
+answer.style.display =
+"block";
+
+}
+
+});
+
+});
+
+/* ======================================
+   COUNTER ANIMATION
+====================================== */
+
+const counters =
+document.querySelectorAll(
+".counter"
+);
+
+const startCounter =
+(counter)=>{
+
+const target =
+parseInt(
+counter.innerText
+);
+
+let count = 0;
+
+const speed =
+target / 120;
+
+const update = ()=>{
+
+count += speed;
+
+if(count < target){
+
+counter.innerText =
+Math.floor(count);
+
+requestAnimationFrame(
+update
+);
+
+}else{
+
+counter.innerText =
+target;
+
+}
+
+};
+
+update();
+
+};
+
+const counterObserver =
+new IntersectionObserver(
+(entries)=>{
+
+entries.forEach(entry=>{
+
+if(
+entry.isIntersecting
+){
+
+startCounter(
+entry.target
+);
+
+counterObserver.unobserve(
+entry.target
+);
+
+}
+
+});
+
+}
+);
+
+counters.forEach(counter=>{
+
+counterObserver.observe(
+counter
+);
+
+});
+
+/* ======================================
+   SCROLL REVEAL
+====================================== */
+
+const revealElements =
+document.querySelectorAll(
+
+".service-card,\
+.pricing-card,\
+.process-card,\
+.portfolio-card,\
+.testimonial-card,\
+.feature-item,\
+.contact-left,\
+.contact-right"
+
+);
+
+const revealObserver =
+new IntersectionObserver(
+
+(entries)=>{
+
+entries.forEach(entry=>{
+
+if(
+entry.isIntersecting
+){
+
+entry.target.classList.add(
+"reveal-active"
+);
+
+}
+
+});
+
+},
+
+{
+threshold:0.15
+}
+
+);
+
+revealElements.forEach(el=>{
+
+revealObserver.observe(el);
+
+});
+
+/* ======================================
+   FLOATING CARDS MOTION
+====================================== */
+
+const floatingCards =
+document.querySelectorAll(
+".floating-card"
+);
+
+window.addEventListener(
+"mousemove",
+(e)=>{
+
+const x =
+e.clientX /
+window.innerWidth;
+
+const y =
+e.clientY /
+window.innerHeight;
+
+floatingCards.forEach(
+(card,index)=>{
+
+const speed =
+(index+1)*8;
+
+card.style.transform =
+`translate(
+${x*speed}px,
+${y*speed}px
+)`;
+
+});
+
+});
+
+/* ======================================
+   PAGE LOADER
+====================================== */
+
+window.addEventListener(
+"load",
+()=>{
+
+document.body.classList.add(
+"loaded"
+);
+
+});
+
+/* ======================================
+   MOUSE GLOW EFFECT
+====================================== */
+
+const glow =
+document.createElement(
+"div"
+);
+
+glow.classList.add(
+"mouse-glow"
+);
+
+document.body.appendChild(
+glow
+);
+
+document.addEventListener(
+"mousemove",
+(e)=>{
+
+glow.style.left =
+e.clientX + "px";
+
+glow.style.top =
+e.clientY + "px";
+
+});
+
+/* ======================================
+   PARALLAX HERO
+====================================== */
+
+const hero =
+document.querySelector(
+".hero-right"
+);
+
+window.addEventListener(
+"scroll",
+()=>{
+
+const scrollY =
+window.scrollY;
+
+if(hero){
+
+hero.style.transform =
+`translateY(${
+scrollY * 0.08
+}px)`;
+
+}
+
+});
 
