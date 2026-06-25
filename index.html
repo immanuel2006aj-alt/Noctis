@@ -1616,6 +1616,217 @@
   line-height:1.7;
 }
 .founder-seo strong{color:#d4af37;}
+  /* =========================================================
+   NOCTIS DESKTOP FULL LAYOUT FIX
+   Paste at the VERY END of your existing CSS
+========================================================= */
+
+@media screen and (min-width: 768px){
+
+  /* Main page width */
+  body{
+    overflow-x:hidden;
+  }
+
+  section,
+  .section{
+    width:100%;
+    padding:80px 0;
+  }
+
+  section > *,
+  .section > *{
+    max-width:1180px;
+  }
+
+  /* All common content wrappers */
+  .container,
+  .wrapper,
+  .content,
+  .section-inner,
+  .inner,
+  .main-container{
+    width:min(1180px, calc(100% - 80px)) !important;
+    max-width:1180px !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+  }
+
+  /* Headings center */
+  section h1,
+  section h2,
+  .section-title{
+    text-align:center;
+  }
+
+  /* Cards: services, work, pricing */
+  .services-grid,
+  .service-grid,
+  .work-grid,
+  .portfolio-grid,
+  .pricing-grid,
+  .package-grid,
+  .packages-grid,
+  .cards-grid,
+  .grid{
+    display:grid !important;
+    grid-template-columns:repeat(3, minmax(0, 1fr)) !important;
+    gap:24px !important;
+    width:100% !important;
+  }
+
+  /* Any direct card children */
+  .services-grid > *,
+  .service-grid > *,
+  .work-grid > *,
+  .portfolio-grid > *,
+  .pricing-grid > *,
+  .package-grid > *,
+  .packages-grid > *,
+  .cards-grid > *,
+  .grid > *{
+    width:auto !important;
+    min-width:0 !important;
+    margin:0 !important;
+  }
+
+  /* 15 package list: 3 columns */
+  .pricing-list,
+  .package-list,
+  .plans-grid{
+    display:grid !important;
+    grid-template-columns:repeat(3, minmax(0, 1fr)) !important;
+    gap:22px !important;
+  }
+
+  /* Process: 4 columns */
+  .process-grid,
+  .process-steps,
+  .steps-grid,
+  .timeline{
+    display:grid !important;
+    grid-template-columns:repeat(4, minmax(0, 1fr)) !important;
+    gap:22px !important;
+    width:100% !important;
+  }
+
+  /* Contact: text left, form right */
+  .contact-grid,
+  .contact-wrapper,
+  .contact-content,
+  .contact-layout{
+    display:grid !important;
+    grid-template-columns:0.9fr 1.1fr !important;
+    gap:50px !important;
+    align-items:start !important;
+    width:100% !important;
+  }
+
+  /* Forms full width */
+  form,
+  .contact-form{
+    width:100% !important;
+    max-width:none !important;
+  }
+
+  form input,
+  form select,
+  form textarea,
+  .contact-form input,
+  .contact-form select,
+  .contact-form textarea{
+    width:100% !important;
+    box-sizing:border-box !important;
+    min-height:50px !important;
+    padding:14px 16px !important;
+    font-size:15px !important;
+  }
+
+  form textarea,
+  .contact-form textarea{
+    min-height:145px !important;
+  }
+
+  form button,
+  .contact-form button{
+    min-height:50px !important;
+    padding:14px 22px !important;
+  }
+
+  /* Founder SEO box */
+  .founder-seo{
+    width:min(900px, calc(100% - 80px)) !important;
+    max-width:900px !important;
+    margin:20px auto 45px !important;
+    padding:22px 30px !important;
+    text-align:center !important;
+    border:1px solid rgba(212,175,55,.35);
+    border-radius:16px;
+    background:rgba(255,255,255,.03);
+  }
+
+  /* Footer 4 columns */
+  footer .container,
+  .footer .container{
+    width:min(1180px, calc(100% - 80px)) !important;
+  }
+
+  .footer-grid,
+  footer .footer-grid{
+    display:grid !important;
+    grid-template-columns:1.5fr 1fr 1fr 1.2fr !important;
+    gap:36px !important;
+    align-items:start !important;
+  }
+
+  /* Footer links proper spacing */
+  .footer a,
+  footer a{
+    display:inline-block;
+    margin:5px 0;
+  }
+
+  /* Prevent tiny narrow cards */
+  .card,
+  .service-card,
+  .price-card,
+  .package-card,
+  .process-card,
+  .work-card{
+    width:100% !important;
+    box-sizing:border-box !important;
+  }
+}
+
+/* Laptop medium screen: 2 cards per row */
+@media screen and (min-width: 768px) and (max-width: 1000px){
+  .services-grid,
+  .service-grid,
+  .work-grid,
+  .portfolio-grid,
+  .pricing-grid,
+  .package-grid,
+  .packages-grid,
+  .cards-grid,
+  .grid,
+  .pricing-list,
+  .package-list,
+  .plans-grid{
+    grid-template-columns:repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .process-grid,
+  .process-steps,
+  .steps-grid,
+  .timeline{
+    grid-template-columns:repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .footer-grid,
+  footer .footer-grid{
+    grid-template-columns:repeat(2, minmax(0, 1fr)) !important;
+  }
+  }
     
   </style>
 </head>
