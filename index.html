@@ -1601,249 +1601,643 @@ grid-template-columns:1fr;
   margin-top:12px;
 }
 
-/* PROCESS + CONTACT RESPONSIVE */
-@media(max-width:900px){
+/* ==========================================
+   PROCESS + CONTACT RESPONSIVE
+   Full Replacement
+========================================== */
+
+/* Large Desktop */
+@media (min-width:1401px){
+
+  .process-grid{
+    grid-template-columns:repeat(4,1fr);
+    gap:24px;
+  }
+
+  .contact-box{
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+  }
+
+}
+
+/* Laptop */
+@media (max-width:1400px){
+
+  .process-grid{
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+  }
+
+  .contact-box{
+    grid-template-columns:1fr 1fr;
+    gap:45px;
+  }
+
+}
+
+/* Tablet Landscape */
+@media (max-width:1100px){
+
   .process-grid{
     grid-template-columns:repeat(2,1fr);
+    gap:20px;
   }
 
   .contact-box{
     grid-template-columns:1fr;
-    gap:30px;
+    gap:35px;
   }
+
+  .form-row{
+    grid-template-columns:1fr 1fr;
+    gap:16px;
+  }
+
 }
 
-@media(max-width:560px){
+/* Tablet */
+@media (max-width:768px){
+
   .process-section,
   .contact-section{
-    padding:58px 0;
+    padding:70px 0;
+  }
+
+  .process-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+  }
+
+  .process-card{
+    min-height:240px;
+  }
+
+  .contact-box{
+    padding:28px 22px;
+    border-radius:20px;
+  }
+
+  .contact-content h2{
+    font-size:2.3rem;
+  }
+
+}
+
+/* Mobile */
+@media (max-width:600px){
+
+  .process-section,
+  .contact-section{
+    padding:60px 0;
   }
 
   .process-grid{
     grid-template-columns:1fr;
+    gap:16px;
   }
 
   .process-card{
     min-height:auto;
+    padding:22px 18px;
   }
 
   .contact-box{
-    padding:22px 16px;
-    border-radius:16px;
+    grid-template-columns:1fr;
+    gap:24px;
+    padding:22px 18px;
+    border-radius:18px;
+  }
+
+  .contact-content{
+    text-align:left;
   }
 
   .contact-content h2{
     font-size:2rem;
+    line-height:1.2;
+  }
+
+  .contact-content p{
+    font-size:.92rem;
+    line-height:1.7;
   }
 
   .form-row{
     grid-template-columns:1fr;
-    gap:0;
+    gap:14px;
   }
 
   .contact-form{
+    padding:20px 16px;
+  }
+
+  .contact-form input,
+  .contact-form select,
+  .contact-form textarea,
+  .contact-form button{
+    width:100%;
+  }
+
+}
+
+/* Small Mobile */
+@media (max-width:420px){
+
+  .process-section,
+  .contact-section{
+    padding:50px 0;
+  }
+
+  .process-card{
+    padding:18px 16px;
+  }
+
+  .process-card h3{
+    font-size:1rem;
+  }
+
+  .process-card p{
+    font-size:.82rem;
+    line-height:1.6;
+  }
+
+  .contact-box{
     padding:18px 14px;
   }
+
+  .contact-content h2{
+    font-size:1.7rem;
+  }
+
+  .contact-content p{
+    font-size:.82rem;
+  }
+
+  .contact-form{
+    padding:16px 12px;
+  }
+
 }
+
+/* Very Small Mobile */
+@media (max-width:340px){
+
+  .process-grid{
+    grid-template-columns:1fr;
+  }
+
+  .contact-box{
+    padding:16px 10px;
+  }
+
+    }
 /* FOOTER */
+/* ==========================================
+   PREMIUM FOOTER
+   Full Replacement
+========================================== */
+
 .footer{
-  background:#01111f;
-  border-top:1px solid rgba(49,81,110,.5);
-  padding:60px 0 22px;
+    background:#01111f;
+    border-top:1px solid rgba(49,81,110,.5);
+    padding:70px 0 25px;
 }
 
 .footer-grid{
-  display:grid;
-  grid-template-columns:1.6fr 1fr 1fr 1fr;
-  gap:35px;
-  padding-bottom:45px;
+    display:grid;
+    grid-template-columns:1.7fr 1fr 1fr 1fr;
+    gap:40px;
+    padding-bottom:45px;
+    align-items:flex-start;
 }
 
 .footer-logo{
-  display:inline-flex;
-  margin-bottom:18px;
+    display:inline-flex;
+    margin-bottom:18px;
 }
 
 .footer-brand p{
-  max-width:310px;
-  color:var(--muted);
-  font-size:.8rem;
-  line-height:1.75;
+    max-width:340px;
+    color:var(--muted);
+    font-size:.85rem;
+    line-height:1.8;
 }
 
 .footer-whatsapp{
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  margin-top:20px;
-  color:var(--gold);
-  font-size:.8rem;
-  font-weight:800;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    margin-top:20px;
+    color:var(--gold);
+    font-size:.82rem;
+    font-weight:700;
+    transition:.3s;
+}
+
+.footer-whatsapp:hover{
+    transform:translateY(-2px);
 }
 
 .footer-links{
-  display:flex;
-  flex-direction:column;
-  gap:11px;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
 }
 
 .footer-links h4{
-  font-family:"Space Grotesk",sans-serif;
-  color:var(--white);
-  font-size:.95rem;
-  margin-bottom:5px;
+    font-family:"Space Grotesk",sans-serif;
+    color:var(--white);
+    font-size:1rem;
+    margin-bottom:10px;
 }
 
 .footer-links a,
 .footer-location{
-  color:var(--muted);
-  font-size:.76rem;
-  transition:.2s ease;
+    color:var(--muted);
+    font-size:.82rem;
+    line-height:1.7;
+    transition:.25s;
 }
 
 .footer-links a:hover{
-  color:var(--gold);
-  transform:translateX(3px);
+    color:var(--gold);
+    transform:translateX(4px);
 }
 
 .footer-location{
-  margin-top:3px;
+    margin-top:4px;
 }
 
 .footer-bottom{
-  padding-top:22px;
-  border-top:1px solid rgba(49,81,110,.35);
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:15px;
-  color:#7891a8;
-  font-size:.7rem;
+    border-top:1px solid rgba(49,81,110,.35);
+    padding-top:22px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:18px;
+    color:#7891a8;
+    font-size:.75rem;
+    flex-wrap:wrap;
 }
 
 .footer-bottom div{
-  display:flex;
-  gap:17px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:18px;
+}
+
+.footer-bottom a{
+    transition:.25s;
 }
 
 .footer-bottom a:hover{
-  color:var(--gold);
+    color:var(--gold);
 }
 
-/* FLOATING WHATSAPP */
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+/* Laptop */
+
+@media (max-width:1200px){
+
+    .footer-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:35px;
+    }
+
+}
+
+/* Tablet */
+
+@media (max-width:768px){
+
+    .footer{
+        padding:60px 0 22px;
+    }
+
+    .footer-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:28px;
+    }
+
+    .footer-brand p{
+        max-width:100%;
+    }
+
+    .footer-bottom{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .footer-bottom div{
+        justify-content:center;
+    }
+
+}
+
+/* Mobile */
+
+@media (max-width:600px){
+
+    .footer{
+        padding:50px 0 20px;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+        gap:30px;
+        text-align:left;
+    }
+
+    .footer-brand p{
+        font-size:.82rem;
+    }
+
+    .footer-links h4{
+        font-size:.95rem;
+    }
+
+    .footer-links a,
+    .footer-location{
+        font-size:.8rem;
+    }
+
+    .footer-whatsapp{
+        font-size:.8rem;
+    }
+
+    .footer-bottom{
+        flex-direction:column;
+        gap:12px;
+        font-size:.72rem;
+        text-align:center;
+    }
+
+    .footer-bottom div{
+        justify-content:center;
+        gap:14px;
+    }
+
+}
+
+/* Small Mobile */
+
+@media (max-width:380px){
+
+    .footer{
+        padding:45px 0 18px;
+    }
+
+    .footer-grid{
+        gap:24px;
+    }
+
+    .footer-brand p,
+    .footer-links a,
+    .footer-location{
+        font-size:.76rem;
+    }
+
+    .footer-bottom{
+        font-size:.68rem;
+    }
+
+  }
+/* ==========================================
+   FLOATING WHATSAPP
+   Full Responsive Replacement
+========================================== */
+
 .floating-whatsapp{
-  position:fixed;
-  right:18px;
-  bottom:18px;
-  z-index:999;
-  width:52px;
-  height:52px;
-  display:grid;
-  place-items:center;
-  border-radius:50%;
-  background:var(--gold);
-  color:#071a2a;
-  font-size:1.5rem;
-  font-weight:900;
-  box-shadow:0 10px 25px rgba(0,0,0,.35);
-  border:2px solid rgba(255,255,255,.15);
-  transition:.25s ease;
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    z-index:9999;
+
+    width:58px;
+    height:58px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:var(--gold);
+    color:#071a2a;
+
+    font-size:1.55rem;
+    font-weight:900;
+
+    border:2px solid rgba(255,255,255,.18);
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.35),
+        0 0 25px rgba(255,193,7,.18);
+
+    transition:all .3s ease;
 }
 
 .floating-whatsapp:hover{
-  transform:scale(1.08) translateY(-3px);
-  background:var(--gold-dark);
+    transform:translateY(-5px) scale(1.08);
+    background:var(--gold-dark);
+    box-shadow:
+        0 16px 35px rgba(0,0,0,.45),
+        0 0 30px rgba(255,193,7,.30);
+}
+
+.floating-whatsapp:active{
+    transform:scale(.95);
+}
+
+/* Large Desktop */
+
+@media (min-width:1600px){
+
+    .floating-whatsapp{
+        width:66px;
+        height:66px;
+        font-size:1.8rem;
+        right:28px;
+        bottom:28px;
+    }
+
+}
+
+/* Laptop */
+
+@media (max-width:1200px){
+
+    .floating-whatsapp{
+        width:56px;
+        height:56px;
+    }
+
+}
+
+/* Tablet */
+
+@media (max-width:768px){
+
+    .floating-whatsapp{
+        width:54px;
+        height:54px;
+        font-size:1.45rem;
+        right:18px;
+        bottom:18px;
+    }
+
+}
+
+/* Mobile */
+
+@media (max-width:600px){
+
+    .floating-whatsapp{
+        width:52px;
+        height:52px;
+        font-size:1.35rem;
+        right:16px;
+        bottom:16px;
+    }
+
+}
+
+/* Small Mobile */
+
+@media (max-width:380px){
+
+    .floating-whatsapp{
+        width:48px;
+        height:48px;
+        font-size:1.25rem;
+        right:14px;
+        bottom:14px;
+    }
+
 }
 
 /* MOBILE NAVIGATION */
-@media(max-width:900px){
-  .nav-links{
-    display:none;
-    position:absolute;
-    top:70px;
-    left:4%;
-    right:4%;
-    flex-direction:column;
-    align-items:stretch;
-    gap:0;
-    padding:12px;
-    background:#06233b;
-    border:1px solid rgba(49,81,110,.8);
-    border-radius:14px;
-    box-shadow:var(--shadow);
-  }
+/* ==========================================
+   NAVIGATION + FOUNDER SEO
+   Full Responsive Replacement
+========================================== */
 
-  .nav-links.active{
-    display:flex;
-  }
+/* ---------- Navigation ---------- */
 
-  .nav-links li{
-    list-style:none;
-  }
+@media (max-width:900px){
 
-  .nav-links a{
-    display:block;
-    padding:13px 12px;
-    border-radius:8px;
-  }
+    .nav-links{
+        display:none;
+        position:absolute;
+        top:72px;
+        left:4%;
+        right:4%;
+        flex-direction:column;
+        gap:8px;
+        padding:16px;
+        background:#06233b;
+        border:1px solid rgba(49,81,110,.8);
+        border-radius:16px;
+        box-shadow:0 18px 45px rgba(0,0,0,.35);
+        z-index:999;
+    }
 
-  .nav-links a:hover{
-    background:rgba(255,193,7,.08);
-  }
+    .nav-links.active{
+        display:flex;
+    }
 
-  .menu-btn.active{
+    .nav-links li{
+        list-style:none;
+        width:100%;
+    }
+
+    .nav-links a{
+        display:block;
+        width:100%;
+        padding:14px 16px;
+        border-radius:10px;
+        transition:.3s;
+    }
+
+    .nav-links a:hover{
+        background:rgba(255,193,7,.08);
+        color:var(--gold);
+    }
+
+    .menu-btn.active{
+        color:var(--gold);
+        border-color:var(--gold);
+    }
+
+}
+
+/* Small Mobile */
+
+@media (max-width:560px){
+
+    .nav-links{
+        left:12px;
+        right:12px;
+        top:68px;
+        padding:14px;
+        border-radius:14px;
+    }
+
+    .nav-links a{
+        padding:13px 14px;
+        font-size:.92rem;
+    }
+
+}
+
+/* ---------- Founder SEO ---------- */
+
+.founder-seo{
+    max-width:900px;
+    margin:40px auto;
+    padding:22px 26px;
+    text-align:center;
+    color:#d8d8d8;
+    font-size:15px;
+    line-height:1.8;
+    background:rgba(255,255,255,.02);
+    border:1px solid rgba(255,193,7,.15);
+    border-radius:16px;
+}
+
+.founder-seo strong{
     color:var(--gold);
-    border-color:var(--gold);
-  }
-
-  .footer-grid{
-    grid-template-columns:repeat(2,1fr);
-    gap:30px;
-  }
 }
 
-@media(max-width:560px){
-  .footer{
-    padding:45px 0 18px;
-  }
+/* Tablet */
 
-  .footer-grid{
-    grid-template-columns:1fr 1fr;
-    gap:27px 18px;
-  }
+@media (max-width:768px){
 
-  .footer-brand{
-    grid-column:1 / -1;
-  }
+    .founder-seo{
+        margin:35px 20px;
+        padding:20px;
+        font-size:14px;
+    }
 
-  .footer-bottom{
-    flex-direction:column;
-    align-items:flex-start;
-    line-height:1.5;
-  }
-
-  .footer-bottom div{
-    gap:13px;
-  }
-
-  .floating-whatsapp{
-    width:48px;
-    height:48px;
-    right:14px;
-    bottom:14px;
-    font-size:1.3rem;
-  }
 }
-  .founder-seo{
-  max-width:900px;
-  margin:30px auto;
-  padding:18px 20px;
-  text-align:center;
-  color:#d8d8d8;
-  font-size:15px;
-  line-height:1.7;
-}
-.founder-seo strong{color:#d4af37;}
+
+/* Mobile */
+
+@media (max-width:480px){
+
+    .founder-seo{
+        margin:30px 16px;
+        padding:18px 16px;
+        font-size:13px;
+        line-height:1.7;
+    }
+
+  }
   /* =========================================================
    NOCTIS DESKTOP FULL LAYOUT FIX
    Paste at the VERY END of your existing CSS
